@@ -213,8 +213,8 @@
                                                 <br>                    
                                             </div>
                                             <div class="modal-footer">                    
-                                                <button type="submit" class="btn btn-primary">Send</button>
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Kirim</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                                             </div>
                                         </div>
                                     </div>    
@@ -265,7 +265,7 @@
                         <p class="ambil-type d-none">{{$laundry->type_id}}</p>
                     @endforeach
                     <button type="submit" class="btn tambah btn-primary">Tambah Cucian</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                 </div>
                 </form>
             </div>

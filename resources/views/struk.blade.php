@@ -70,27 +70,20 @@
                         <td>{{$item->laundry->typeLaundry->type}}</td>
                         <td>{{$item->laundry->price}}</td>
                         <td>{{$item->qty}}</td>
-                        <td>{{$item->laundry->price * $item->qty}}</td>
+                        <td>Rp. {{number_format($item->laundry->price * $item->qty)}},00</td>
                     </tr>
                     @endforeach
-                    {{-- @foreach ($struk->orderdetails as $item)
-                    <tr>
-                        <p>{{$item->laundry->price}}</p>
-                    </tr>
-                    @endforeach
-                    @foreach ($struk->orderdetails as $item)
-                    <tr>
-                        <p>{{$item->qty}}</p>
-                    </tr>
-                    @endforeach
-                    @foreach ($struk->orderdetails as $item)
-                    <tr>
-                        <p>{{$item->laundry->price * $item->qty}}</p>
-                    </tr>
-                    @endforeach                                                     --}}
                 <tr>
-                    <th colspan="2">Total</th>
-                    <td colspan="2">{{$struk->total_price}}</td>
+                    <th colspan="3">Total</th>
+                    <td colspan="2">Rp. {{number_format($struk->total_price)}},00</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Bayar</th>
+                    <td colspan="1">Rp. {{number_format($struk->paid)}},00</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Kembalian</th>
+                    <td colspan="1">Rp. {{number_format($struk->change_money)}},00</td>
                 </tr>
             </tbody>        
         </table>
