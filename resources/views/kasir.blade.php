@@ -241,7 +241,7 @@
                     @csrf
                 <div class="modal-body">
                     <label for="">Jenis</label>                    
-                    <select name="jenis" class="form-control" id="jenis">
+                    <select name="jenis" autofocus class="form-control" id="jenis">
                         <option value="0">Pilih Jenis</option>
                         @foreach ($laundries as $laundry)                            
                         <option value="{{ $laundry->id }}" data-price="{{ $laundry->price }}">{{$laundry->typeLaundry->type}}</option>
@@ -255,8 +255,8 @@
                             </div>
                          <input type="text" id="harga" readonly class="form-control" id="inlineFormInputGroup" placeholder="..." name="harga">
                         </div>
-                    <label for="">Jumlah</label>
-                    <input type="number" id="jumlah" required name="jumlah" class="form-control">
+                    <label for="">Jumlah *satuan/kg</label>
+                    <input type="number" id="jumlah" placeholder="Masukkan Jumlah satuan/kg" required name="jumlah" class="form-control">
                     <br>
                     <i class="d-none" id="text">*Semua jenis sudah dipilih</i>
                 </div>
@@ -264,7 +264,7 @@
                     @foreach ($laundries as $laundry)
                         <p class="ambil-type d-none">{{$laundry->type_id}}</p>
                     @endforeach
-                    <button type="submit" class="btn tambah btn-primary">Tambah Cucian</button>
+                    <button type="submit" class="btn tambah btn-primary">Masukkan Cucian</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                 </div>
                 </form>
